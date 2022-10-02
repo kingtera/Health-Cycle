@@ -1,12 +1,54 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Health Cycle</title>
+    <link rel="icon" href="./assets/icon.svg">
 </head>
 <body>
-    
+    <h1>
+        Health Cycle
+        <span>Melhorando sempre a sua saúde</span>
+    </h1>
+    <p>Seu progresso</p>
+
+    <div class="cycles">
+        <div class="water-cycle">
+            <input type="range">
+        </div>
+        <div class="exercise-cycle">
+            <input type="range">
+        </div>
+        <div class="meditation-cycle">
+            <input type="range">
+        </div>
+    </div>
+
+    <div class="data">
+        <div class="water-data">
+            <h3>Consumo total(L): 5</h3>
+            <p>
+                Tomou mais água? Insira aqui a quantidade(L):
+                <input type="number" placeholder="1">
+            </p>
+        </div>
+
+        <div class="exercise-data">
+            <h3>Seu treino</h3>
+            <input type="checkbox"><p>Cardio 5km</p>
+            <input type="checkbox"><p>Bíceps</p>
+            <input type="checkbox"><p>Costas</p>
+        </div>
+
+        <div class="meditation-data">
+            <h3>Tempo total(min): 10</h3>
+            <p>
+                Meditou? Coloque aqui o tempo da sua sessão:
+                <input type="number" placeholder="1">
+            </p>
+        </div>
+    </div>
 </body>
 </html>
