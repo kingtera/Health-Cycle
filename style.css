@@ -8,19 +8,25 @@
     font-size: 62.5%;
 
     --ff-main: 'Roboto', sans-serif;
+    --ff-h3: 'Poppins', sans-serif;
 
     --bg-color-card: #FFFFFF;
-    --bg-color-body: linear-gradient(#8cd7c0 70%, #FFFFFF);
+    --bg-color-body: linear-gradient(#8cd7c0 50%, #aed7cbea);
     
-    --color-water-progress: #19daec;
-    --color-exercise-progress: #17dca1;
-    --color-meditation-progress: rgb(235, 165, 44);
+    --alpha-water: 1;
+    --alpha-exercise: 1;
+    --alpha-meditation: 1;
+
+    --color-water-progress: rgba(25,218,236,var(--alpha-water));
+    --color-exercise-progress: rgba(23,220,161,var(--alpha-exercise));
+    --color-meditation-progress: rgba(235, 165, 44,var(--alpha-meditation));
 }
 
 body {
     background: var(--bg-color-body);
+    background-repeat: no-repeat;
     font-family: var(--ff-main);
-    height: 100vh;
+    height: 100%;
 }
 
 h1 {
@@ -32,6 +38,17 @@ h1 {
 
     display: flex;
     flex-direction: column;
+}
+
+h3 {
+    font-family: var(--ff-h3);
+}
+
+.wrapper {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 1.5rem;
 }
 
 .cycles {
@@ -49,8 +66,7 @@ h1 {
     margin-top: 5rem;
     padding: 1.5rem;
     width: clamp(24rem, 26rem + 5vw, 40rem);
-    
-    font-family: 'Poppins', sans-serif;
+
     font-size: 2rem;
     font-weight: bold;
     text-align: center;
@@ -90,4 +106,111 @@ h1 {
     font-size: 1.75rem;
 
     transform: rotate(316deg);
+}
+
+.data {
+    text-align: center;
+}
+
+.water-card, .exercise-card, .meditation-card {
+    display: grid;
+    place-content: center;
+
+    margin-top: 1rem;
+    padding: 1rem;
+}
+
+.water-data, .exercise-data, .meditation-data {
+    background: rgba(255, 255, 255, 0.851);
+    border-radius: 1.5rem;
+    
+    padding: 2rem;
+    width: 20rem;
+
+    font-size: 1.2rem;
+}
+
+.water-data input, .meditation-data input {
+    display: block;
+
+    border: 1px solid #E6E6F0;
+    border-radius: .5rem 0 0 .5rem;
+    margin-top: .4rem;
+    padding: 1rem;
+    width: 7rem;
+
+    font-family: var(--ff-h3);
+}
+
+.water-data div, .meditation-data div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.water-data input:focus, .meditation-data input:focus {
+    outline: 0;
+}
+
+.water-data button, .meditation-data button {
+    background: #E6E6F0;
+
+    height: 4.2rem;
+    margin-top: .4rem;
+    padding: .6rem;
+
+    border: none;
+    border-radius: 0 .5rem .5rem 0;
+
+    cursor: pointer;
+}
+
+.exercise-wrapper {
+    display: grid;
+    row-gap: .2rem;
+    place-content: center;
+
+    padding: .5rem;
+}
+
+.exercise-check {
+    position: relative;
+}
+
+.exercise-check label {
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+    max-width: 10rem;
+
+    cursor: pointer;
+}
+
+.exercise-check label::before {
+    content: '';
+    display: block;
+    height: 2.2rem;
+    width: 2.2rem;
+
+    border: 1px solid #E6E6F0;
+    border-radius: .5rem;
+}
+
+.exercise-check input:checked + label::before {
+    background: url(./assets/check.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.exercise-check input {
+    position: absolute;
+    top:0;
+    left: 0;
+
+    height: 2.2rem;
+    width: 2.2rem;
+
+    opacity: 0;
+
+    cursor: pointer;
 }

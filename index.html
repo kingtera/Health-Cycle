@@ -18,44 +18,72 @@
         Health Cycle
     </h1>
     
-    <div class="cycles">
-        <div class="cycles-card">
-            <p>Seu progresso</p>
-            <div class="water-cycle">
-                <div class="progress">100%</div class="progress">
+    <div class="wrapper">
+        <section class="cycles">
+            <div class="cycles-card">
+                <p>Seu progresso</p>
+                <div class="water-cycle">
+                    <div class="progress">100%</div class="progress">
+                </div>
+                <div class="exercise-cycle">
+                    <div class="progress">100%</div class="progress">
+                </div>
+                <div class="meditation-cycle">
+                    <div class="progress">100%</div class="progress">
+                </div>
             </div>
-            <div class="exercise-cycle">
-                <div class="progress">100%</div class="progress">
+        </section>
+
+        <section class="data">
+            <div class="water-card">
+                <div class="water-data">
+                    <h3>Consumo total(L): 5</h3>
+                    <label>
+                        Tomou mais água? Insira aqui a quantidade(mL)
+                    </label>
+                    <div>
+                        <input type="number" placeholder="250">
+                        <button>&#187</button>
+                    </div>
+                </div>
             </div>
-            <div class="meditation-cycle">
-                <div class="progress">100%</div class="progress">
+
+            <div class="exercise-card">
+                <div class="exercise-data">
+                    <h3>Seu treino</h3>
+                    
+                    <div class="exercise-wrapper">
+                        <div class="exercise-check">
+                            <input id="exercise1" type="checkbox">
+                            <label for="exercise1">Cardio 5km</label>
+                        </div>
+
+                        <div class="exercise-check">
+                            <input id="exercise2" type="checkbox">
+                            <label for="exercise2">Bíceps</label>
+                        </div>
+
+                        <div class="exercise-check">
+                            <input id="exercise3" type="checkbox">
+                            <label for="exercise3">Costas</label>
+                        </div>
+                    </div>
+                </div>
             </div>
-        </div>
-    </div>
 
-    <div class="data">
-        <div class="water-data">
-            <h3>Consumo total(L): 5</h3>
-            <p>
-                Tomou mais água? Insira aqui a quantidade(L):
-                <input type="number" placeholder="1">
-            </p>
-        </div>
-
-        <div class="exercise-data">
-            <h3>Seu treino</h3>
-            <input type="checkbox"><p>Cardio 5km</p>
-            <input type="checkbox"><p>Bíceps</p>
-            <input type="checkbox"><p>Costas</p>
-        </div>
-
-        <div class="meditation-data">
-            <h3>Tempo total(min): 10</h3>
-            <p>
-                Meditou? Coloque aqui o tempo da sua sessão:
-                <input type="number" placeholder="1">
-            </p>
-        </div>
+            <div class="meditation-card">
+                <div class="meditation-data">
+                    <h3>Tempo total(min): 10</h3>
+                    <p>
+                        Meditou? Coloque aqui o tempo da sua sessão
+                        <div>
+                            <input type="number" placeholder="5">
+                            <button>&#187</button>
+                        </div>
+                    </p>
+                </div>
+            </div>
+        </section>
     </div>
 </body>
 </html>
