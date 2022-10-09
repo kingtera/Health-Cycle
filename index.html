@@ -14,10 +14,6 @@
     <title>Health Cycle</title>
 </head>
 <body>
-    <h1>
-        Health Cycle
-    </h1>
-    
     <div class="wrapper">
         <section class="cycles">
             <div class="cycles-card">
@@ -37,6 +33,9 @@
         <section class="data">
             <div class="water-card">
                 <div class="water-data">
+                    <button class="history">
+                        <img src="./assets/history.svg"/>
+                    </button>
                     <h3>Consumo total(L): 5</h3>
                     <label>
                         Tomou mais água? Insira aqui a quantidade(mL)
@@ -45,7 +44,43 @@
                         <input type="number" placeholder="250">
                         <button>&#187</button>
                     </div>
+
+                    <div class="history-activated">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Horário</th>
+                                    <th>Quantidade(mL)</th>
+                                    <th>Ação</th>
+                                </tr>
+                            </thead>
+    
+                            <tbody class="no-history hide">
+                                <tr>
+                                    <td colspan="3">
+                                        <p>Nenhum dado adicionado</p>
+                                    </td>
+                                </tr>
+                            </tbody>
+    
+                            <tbody>
+                                <tr>
+                                    <td>13:30</td>
+                                    <td>250</td>
+                                    <td>
+                                        <button>
+                                            <img src="./assets/edit-icon.svg" alt="ícone de um lápis">
+                                        </button>
+                                        <button>
+                                            <img src="./assets/remove-icon.svg" alt="ícone vermelho com o sinal de menos">
+                                        </button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
                 </div>
+
             </div>
 
             <div class="exercise-card">
@@ -73,6 +108,9 @@
 
             <div class="meditation-card">
                 <div class="meditation-data">
+                    <button class="history">
+                        <img src="./assets/history.svg"/>
+                    </button>
                     <h3>Tempo total(min): 10</h3>
                     <p>
                         Meditou? Coloque aqui o tempo da sua sessão
@@ -81,6 +119,41 @@
                             <button>&#187</button>
                         </div>
                     </p>
+
+                    <div class="history-activated">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Horário</th>
+                                    <th>Tempo(min)</th>
+                                    <th>Ação</th>
+                                </tr>
+                            </thead>
+    
+                            <tbody class="no-history hide">
+                                <tr>
+                                    <td colspan="3">
+                                        <p>Nenhum dado adicionado</p>
+                                    </td>
+                                </tr>
+                            </tbody>
+    
+                            <tbody>
+                                <tr>
+                                    <td>13:30</td>
+                                    <td>10</td>
+                                    <td>
+                                        <button>
+                                            <img src="./assets/edit-icon.svg" alt="ícone de um lápis">
+                                        </button>
+                                        <button>
+                                            <img src="./assets/remove-icon.svg" alt="ícone vermelho com o sinal de menos">
+                                        </button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
                 </div>
             </div>
         </section>
